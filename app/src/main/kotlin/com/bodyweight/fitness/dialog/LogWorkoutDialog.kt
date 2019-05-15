@@ -196,6 +196,7 @@ class LogWorkoutDialog : BottomSheetDialogFragment() {
         val results = realm.where(RepositoryRoutine::class.java)
                 .lessThan("startTime", repositoryRoutine.startTime)
                 .notEqualTo("id", repositoryRoutine.id)
+                .equalTo("title", repositoryRoutine.title)
                 .findAll()
 
         if (results.isNotEmpty()) {
