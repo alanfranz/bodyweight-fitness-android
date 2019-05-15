@@ -18,6 +18,51 @@
       "mode": "all"
     },
     {
+      "exerciseId": "01379fb5-80af-474a-90b6-efcebed138d4",
+      "title": "Shoulder Rolls",
+      "description": "1x(5-10)",
+      "type": "exercise",
+      "youTubeId": "H01oGIS1C_g",
+      "videoId": "bodyweight_fitness_shoulder_rolls",
+      "defaultSet": "weighted"
+    },
+    {
+      "exerciseId": "exercise3",
+      "title": "Scapular Shrugs",
+      "description": "1x(5-10)",
+      "type": "exercise",
+      "youTubeId": "akgQbxhrhOc",
+      "videoId": "bodyweight_fitness_scapular_shrugs",
+      "defaultSet": "weighted"
+    },
+    {
+      "exerciseId": "exercise2",
+      "title": "Camel Bends",
+      "description": "1x(5-10)",
+      "type": "exercise",
+      "youTubeId": "K9bK0BwKFjs",
+      "videoId": "bodyweight_fitness_camel_bends",
+      "defaultSet": "weighted"
+    },
+    {
+      "exerciseId": "084e964d-875b-4fb2-81db-02de9820363c",
+      "title": "Straight Arm Overhead Pull Downs",
+      "description": "1x(5-10)",
+      "type": "exercise",
+      "youTubeId": "8lDC4Ri9zAQ&feature=youtu.be&t=4m22s",
+      "videoId": "bodyweight_fitness_straight_arm_overhead_pull_downs",
+      "defaultSet": "weighted"
+    },
+    {
+      "exerciseId": "2589e669-6bc6-4796-a3a5-0b4e32456e92",
+      "title": "Straight Arm Chest Flies",
+      "description": "1x(5-10)",
+      "type": "exercise",
+      "youTubeId": "8lDC4Ri9zAQ&feature=youtu.be&t=5m12s",
+      "videoId": "bodyweight_fitness_straight_arm_chest_flies",
+      "defaultSet": "weighted"
+    },
+    {
       "exerciseId": "exercise1",
       "title": "Band Dislocates",
       "description": "1x(5-10)",
@@ -27,12 +72,21 @@
       "defaultSet": "weighted"
     },
     {
-      "exerciseId": "squatskyreaches",
-      "title": "Sky Squat Reaches",
+      "exerciseId": "exercise5",
+      "title": "Front Leg Swings",
       "description": "1x(5-10)",
       "type": "exercise",
-      "youTubeId": "",
-      "videoId": "",
+      "youTubeId": "4aoUZEZFJF8",
+      "videoId": "bodyweight_fitness_front_leg_swings",
+      "defaultSet": "weighted"
+    },
+    {
+      "exerciseId": "ee6adf81-5838-47fd-bfcc-c97ea63a7045",
+      "title": "Side Leg Swings",
+      "description": "1x(5-10)",
+      "type": "exercise",
+      "youTubeId": "4aoUZEZFJF8",
+      "videoId": "bodyweight_fitness_side_leg_swings",
       "defaultSet": "weighted"
     },
     {
@@ -43,24 +97,6 @@
       "youTubeId": "HU5UCh_E6Ns",
       "videoId": "bodyweight_fitness_wrist_mobility",
       "defaultSet": "weighted"
-    },
-    {
-      "exerciseId": "scapularpulls",
-      "title": "Scapular Pulls",
-      "description": "1x(5-10)",
-      "type": "exercise",
-      "youTubeId": "",
-      "videoId": "",
-      "defaultSet": "weighted"
-    },
-    {
-      "exerciseId": "supporthold",
-      "title": "Support Hold",
-      "description": "30s hold",
-      "type": "exercise",
-      "youTubeId": "Zv87Teu51tQ",
-      "videoId": "bodyweight_fitness_parallel_bar_support",
-      "defaultSet": "timed"
     },
     {
       "sectionId": "section1",
@@ -121,6 +157,24 @@
       "type": "exercise",
       "youTubeId": "wrzjVTK2brk",
       "videoId": "bodyweight_fitness_arch",
+      "defaultSet": "timed"
+    },
+    {
+      "exerciseId": "scapularpulls",
+      "title": "Scapular Pulls",
+      "description": "1x(5-10)",
+      "type": "exercise",
+      "youTubeId": "",
+      "videoId": "",
+      "defaultSet": "weighted"
+    },
+    {
+      "exerciseId": "supporthold",
+      "title": "Support Hold",
+      "description": "30s hold",
+      "type": "exercise",
+      "youTubeId": "Zv87Teu51tQ",
+      "videoId": "bodyweight_fitness_parallel_bar_support",
       "defaultSet": "timed"
     },
     {
