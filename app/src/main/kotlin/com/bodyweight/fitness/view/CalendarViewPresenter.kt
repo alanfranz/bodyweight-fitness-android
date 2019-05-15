@@ -30,6 +30,7 @@ import rx.android.schedulers.AndroidSchedulers
 
 import java.io.File
 import java.io.FileOutputStream
+import java.util.Locale
 
 class CalendarPresenter : AbstractPresenter() {
     @Transient
@@ -96,7 +97,8 @@ class CalendarPresenter : AbstractPresenter() {
                                     }
 
 
-                                    val subject = "Logged Workouts " + Stream.currentCalendarDay.getDate()
+                                    val date = Stream.currentCalendarDay.getDate().toString("dd MMMM, YYYY", Locale.ENGLISH)
+                                    val subject = "Logged Workouts $date"
                                     context.startActivity(Intent().apply {
                                         action = Intent.ACTION_SEND
                                         type = "text/csv"
