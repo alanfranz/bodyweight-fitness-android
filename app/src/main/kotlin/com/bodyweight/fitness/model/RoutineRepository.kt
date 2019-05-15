@@ -183,15 +183,16 @@ open class RepositoryRoutine(
             val routineTitle = "${repositoryRoutine.title} - ${repositoryRoutine.subtitle}"
             val weightUnit = Preferences.weightMeasurementUnit.toString()
 
-            var content = "Date, Start Time, End Time, Workout Length, Routine, Exercise, Set Order, Reps, Weight, Minutes, Seconds\n"
+            val builder = StringBuilder()
+            builder.append("Date, Start Time, End Time, Workout Length, Routine, Exercise, Set Order, Reps, Weight, Minutes, Seconds\n")
 
             for (exercise in getVisibleAndCompletedExercises(repositoryRoutine.exercises)) {
                 for ((index, set) in exercise.sets.withIndex()) {
-                    content += "$date,$startTime,$lastUpdatedTime,$workoutLength,$routineTitle,${exercise.title},${index + 1},${set.reps},${set.weight} $weightUnit,${set.seconds.formatMinutes(false)},${set.seconds.formatSeconds(false)}\n"
+                    builder.append("$date,$startTime,$lastUpdatedTime,$workoutLength,$routineTitle,${exercise.title},${index + 1},${set.reps},${set.weight} $weightUnit,${set.seconds.formatMinutes(false)},${set.seconds.formatSeconds(false)}\n")
                 }
             }
 
-            return content
+            return builder.toString()
         }
     }
 }
