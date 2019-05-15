@@ -24,7 +24,7 @@ open class RepositoryRoutine(
         open var id: String = "",
 
         @Index
-        open var routineId: String = "routine1",
+        open var routineId: String = "routine2",
 
         open var title: String = "",
         open var subtitle: String = "",

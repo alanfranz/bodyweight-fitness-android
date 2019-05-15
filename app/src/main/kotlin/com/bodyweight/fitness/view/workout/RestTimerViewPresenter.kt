@@ -77,7 +77,9 @@ class RestTimerPresenter : AbstractPresenter() {
                     RestTimerShared.countDownTimer?.start()
                 }
             } else {
-                if (RoutineStream.routine.routineId != "routine0" && RoutineStream.routine.routineId != "routine1") {
+                if (RoutineStream.routine.routineId != "routine0"
+		    && RoutineStream.routine.routineId != "routine1"
+		    && RoutineStream.routine.routineId != "routine2") {
                     if (Preferences.showRestTimerAfterFlexibilityExercises) {
                         RestTimerShared.countDownTimer?.start()
                     }
