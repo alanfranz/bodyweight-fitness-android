@@ -55,6 +55,13 @@ class TimerPresenter : AbstractPresenter() {
                 }
     }
 
+    override fun restoreView(view: AbstractView) {
+        super.restoreView(view)
+        if (!TimerShared.isPlaying) {
+            restartTimer(getSeconds(), true, false)
+        }
+    }
+
     override fun saveView() {
         TimerShared.restored = true
 
