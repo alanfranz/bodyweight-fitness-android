@@ -10,7 +10,6 @@ import com.bodyweight.fitness.R
 import com.bodyweight.fitness.stream.Stream
 import com.bodyweight.fitness.utils.Preferences
 
-import com.kobakei.ratethisapp.RateThisApp
 import com.trello.rxlifecycle.android.ActivityEvent
 
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity
@@ -43,13 +42,6 @@ class MainActivity : RxAppCompatActivity() {
 
             startActivity(Intent(this, IntroductionActivity::class.java))
         }
-    }
-
-    override fun onStart() {
-        super.onStart()
-
-        RateThisApp.onStart(this)
-        RateThisApp.showRateDialogIfNeeded(this)
     }
 
     override fun onStop() {
