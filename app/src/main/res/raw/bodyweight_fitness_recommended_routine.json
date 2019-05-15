@@ -488,6 +488,43 @@
       "defaultSet": "timed"
     },
     {
+      "sectionId": "section8b",
+      "title": "Leg Raise Progression",
+      "description": "3x(5-8)",
+      "type": "section",
+      "mode": "levels"
+    },
+    {
+      "exerciseId": "exercise8b1",
+      "level": "Level 1",
+      "title": "Flat Leg Raise",
+      "description": "3x(5-8)",
+      "type": "exercise",
+      "youTubeId": "",
+      "videoId": "",
+      "defaultSet": "weighted"
+    },
+    {
+      "exerciseId": "exercise8b2",
+      "level": "Level 2",
+      "title": "Forearm Leg Raise",
+      "description": "3x(5-8)",
+      "type": "exercise",
+      "youTubeId": "",
+      "videoId": "",
+      "defaultSet": "weighted"
+    },
+    {
+      "exerciseId": "exercise8b3",
+      "level": "Level 2",
+      "title": "Hanging Leg Raise",
+      "description": "3x(5-8)",
+      "type": "exercise",
+      "youTubeId": "",
+      "videoId": "",
+      "defaultSet": "weighted"
+    },
+    {
       "sectionId": "section9",
       "title": "Pushing",
       "description": "3x(5-8)",
