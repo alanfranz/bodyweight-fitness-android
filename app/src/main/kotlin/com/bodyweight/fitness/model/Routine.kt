@@ -10,7 +10,7 @@ abstract class LinkedRoutine : Serializable {
 }
 
 class Routine(JSONRoutine: JSONRoutine) : Serializable {
-    var routineId: String = "routine0"
+    var routineId: String = "routine1"
     var title: String = ""
     var subtitle: String = ""
     var shortDescription: String = ""

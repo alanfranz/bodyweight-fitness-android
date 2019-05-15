@@ -21,11 +21,20 @@ class ToolbarSpinnerAdapter : BaseAdapter() {
             routines = listOf(
                     SpinnerRoutine(0, "Bodyweight Fitness", "Recommended Routine"),
                     SpinnerRoutine(1, "Starting Stretching", "Flexibility Routine"),
-                    SpinnerRoutine(2, "Molding Mobility", "Flexibility Routine")
+                    SpinnerRoutine(2, "Molding Mobility", "Flexibility Routine"),
+                    SpinnerRoutine(3, "Bodyweight Fitness (May 2018)", "Recommended Routine (May 2018)")
+            )
+        } else if (routineId == "routine1") {
+            routines = listOf(
+                    SpinnerRoutine(3, "Bodyweight Fitness (May 2018)", "Recommended Routine (May 2018)"),
+                    SpinnerRoutine(2, "Molding Mobility", "Flexibility Routine"),
+                    SpinnerRoutine(0, "Bodyweight Fitness", "Recommended Routine"),
+                    SpinnerRoutine(1, "Starting Stretching", "Flexibility Routine")
             )
         } else if (routineId == "e73593f4-ee17-4b9b-912a-87fa3625f63d") {
             routines = listOf(
                     SpinnerRoutine(2, "Molding Mobility", "Flexibility Routine"),
+                    SpinnerRoutine(3, "Bodyweight Fitness (May 2018)", "Recommended Routine (May 2018)"),
                     SpinnerRoutine(0, "Bodyweight Fitness", "Recommended Routine"),
                     SpinnerRoutine(1, "Starting Stretching", "Flexibility Routine")
             )
@@ -33,13 +42,15 @@ class ToolbarSpinnerAdapter : BaseAdapter() {
             routines = listOf(
                     SpinnerRoutine(1, "Starting Stretching", "Flexibility Routine"),
                     SpinnerRoutine(0, "Bodyweight Fitness", "Recommended Routine"),
-                    SpinnerRoutine(2, "Molding Mobility", "Flexibility Routine")
+                    SpinnerRoutine(2, "Molding Mobility", "Flexibility Routine"),
+                    SpinnerRoutine(3, "Bodyweight Fitness (May 2018)", "Recommended Routine (May 2018)")
             )
         } else {
             routines = listOf(
                     SpinnerRoutine(0, "Bodyweight Fitness", "Recommended Routine"),
                     SpinnerRoutine(1, "Starting Stretching", "Flexibility Routine"),
-                    SpinnerRoutine(2, "Molding Mobility", "Flexibility Routine")
+                    SpinnerRoutine(2, "Molding Mobility", "Flexibility Routine"),
+                    SpinnerRoutine(3, "Bodyweight Fitness (May 2018)", "Recommended Routine (May 2018)")
             )
         }
     }

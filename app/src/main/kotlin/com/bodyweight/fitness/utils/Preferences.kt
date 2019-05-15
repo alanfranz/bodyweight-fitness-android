@@ -30,7 +30,7 @@ object Preferences {
     var defaultRoutine: String
         get() {
             return getSharedPreferences()
-                    .getString(Constants.preferencesDefaultRoutineKey, "routine0")
+                    .getString(Constants.preferencesDefaultRoutineKey, "routine1")
         }
 
         set(value) {

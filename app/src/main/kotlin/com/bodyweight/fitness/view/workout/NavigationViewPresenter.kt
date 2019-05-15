@@ -77,7 +77,7 @@ class NavigationPresenter : AbstractPresenter() {
                     view.showRestTimer()
                 }
             } else {
-                if (RoutineStream.routine.routineId != "routine0") {
+                if (RoutineStream.routine.routineId != "routine0" && RoutineStream.routine.routineId != "routine1") {
                     if (Preferences.showRestTimerAfterFlexibilityExercises) {
                         view.showRestTimer()
                     }
