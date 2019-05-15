@@ -31,6 +31,8 @@ class LogWorkoutPresenter {
 
         val numberOfSets = repositoryExercise.sets.size
         val numberOfReps = repositoryExercise.sets.map { it.reps }.sum()
+        val amountOfWeight = repositoryExercise.sets.map { it.weight }.sum()
+        val kglb = Preferences.weightMeasurementUnit.asString;
 
         val rawSeconds = repositoryExercise.sets.map { it.seconds }.sum()
 
@@ -58,7 +60,11 @@ class LogWorkoutPresenter {
                 }
             }
 
-            return "1 Set, $numberOfReps $reps"
+            if (amountOfWeight > 0) {
+                return "1 Set, $numberOfReps $reps x $amountOfWeight ${kglb}"
+            } else {
+                return "1 Set, $numberOfReps $reps"
+            }
         } else {
             if (repositoryExercise.defaultSet == "timed") {
                 var description = ""
@@ -77,10 +83,12 @@ class LogWorkoutPresenter {
             var description = ""
 
             for (set in repositoryExercise.sets) {
-                if (repositoryExercise.sets.last() == set) {
-                    description += "${set.reps}"
-                } else {
-                    description += "${set.reps}-"
+                description += "${set.reps}"
+                if (set.weight > 0) {
+                    description += "x${set.weight}${kglb}"
+                }
+                if (repositoryExercise.sets.last() != set) {
+                    description += "-"
                 }
             }
 
