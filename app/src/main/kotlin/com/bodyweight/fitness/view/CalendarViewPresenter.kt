@@ -95,12 +95,15 @@ class CalendarPresenter : AbstractPresenter() {
                                         close()
                                     }
 
+
+                                    val subject = "Logged Workouts " + Stream.currentCalendarDay.getDate()
                                     context.startActivity(Intent().apply {
                                         action = Intent.ACTION_SEND
                                         type = "text/csv"
                                         flags = Intent.FLAG_GRANT_READ_URI_PERMISSION
 
                                         putExtra(Intent.EXTRA_STREAM, FileProvider.getUriForFile(context, Constants.fileProvider, file))
+                                        putExtra(Intent.EXTRA_SUBJECT, subject);
                                     })
                                 }
                             })
