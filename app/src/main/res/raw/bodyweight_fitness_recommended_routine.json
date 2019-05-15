@@ -277,8 +277,18 @@
       "defaultSet": "weighted"
     },
     {
-      "exerciseId": "exercise20",
+      "exerciseId": "exercise20a",
       "level": "Level 1",
+      "title": "Jackknife Pull Up",
+      "description": "3x(5-8)",
+      "type": "exercise",
+      "youTubeId": "",
+      "videoId": "",
+      "defaultSet": "weighted"
+    },
+    {
+      "exerciseId": "exercise20",
+      "level": "Level 2",
       "title": "Negative Pull Up",
       "description": "3x(5-8)",
       "type": "exercise",
@@ -288,7 +298,7 @@
     },
     {
       "exerciseId": "exercise21",
-      "level": "Level 2",
+      "level": "Level 3",
       "title": "Pull Up",
       "description": "3x(5-8)",
       "type": "exercise",
@@ -298,7 +308,7 @@
     },
     {
       "exerciseId": "exercise22",
-      "level": "Level 3",
+      "level": "Level 4",
       "title": "L-Sit Pull Up",
       "description": "3x(5-8)",
       "type": "exercise",
@@ -308,7 +318,7 @@
     },
     {
       "exerciseId": "exercise23",
-      "level": "Level 4",
+      "level": "Level 5",
       "title": "Pull Over",
       "description": "3x(5-8)",
       "type": "exercise",
@@ -324,8 +334,28 @@
       "mode": "levels"
     },
     {
-      "exerciseId": "exercise24",
+      "exerciseId": "exercise24a",
       "level": "Level 1",
+      "title": "Bench Dips",
+      "description": "3x(5-8)",
+      "type": "exercise",
+      "youTubeId": "",
+      "videoId": "",
+      "defaultSet": "weighted"
+    },
+    {
+      "exerciseId": "exercise24b",
+      "level": "Level 2",
+      "title": "Foot-Supported Parallel Bar Dips",
+      "description": "3x(5-8)",
+      "type": "exercise",
+      "youTubeId": "",
+      "videoId": "",
+      "defaultSet": "weighted"
+    },
+    {
+      "exerciseId": "exercise24",
+      "level": "Level 3",
       "title": "Parallel Bar Dips",
       "description": "3x(5-8)",
       "type": "exercise",
@@ -335,7 +365,7 @@
     },
     {
       "exerciseId": "exercise25",
-      "level": "Level 2",
+      "level": "Level 4",
       "title": "Ring Dips",
       "description": "3x(5-8)",
       "type": "exercise",
@@ -345,7 +375,7 @@
     },
     {
       "exerciseId": "exercise26",
-      "level": "Level 3",
+      "level": "Level 5",
       "title": "Ring Dips in L-Sit",
       "description": "3x(5-8)",
       "type": "exercise",
@@ -388,6 +418,26 @@
       "type": "exercise",
       "youTubeId": "cQC9OMF3-AE",
       "videoId": "bodyweight_fitness_deep_step_up",
+      "defaultSet": "weighted"
+    },
+    {
+      "exerciseId": "exercise29b",
+      "level": "Level 4",
+      "title": "Box Pistol Squat",
+      "description": "3x(5-8)",
+      "type": "exercise",
+      "youTubeId": "",
+      "videoId": "",
+      "defaultSet": "weighted"
+    },
+    {
+      "exerciseId": "exercise29c",
+      "level": "Level 5",
+      "title": "Pistol Squat",
+      "description": "3x(5-8)",
+      "type": "exercise",
+      "youTubeId": "",
+      "videoId": "",
       "defaultSet": "weighted"
     },
     {
