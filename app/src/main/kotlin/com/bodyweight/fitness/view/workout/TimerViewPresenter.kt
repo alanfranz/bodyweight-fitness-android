@@ -53,6 +53,11 @@ class TimerPresenter : AbstractPresenter() {
                         restartTimer(getSeconds(), false, false)
                     }
                 }
+        Stream.repositoryObservable()
+                .bindToLifecycle(view)
+                .subscribe {
+                    updateLabels()
+                }
     }
 
     override fun restoreView(view: AbstractView) {
@@ -121,7 +126,48 @@ class TimerPresenter : AbstractPresenter() {
         view.setMinutes(seconds.formatMinutes())
         view.setSeconds(seconds.formatSeconds())
 
+        updateLabels()
+
         view.showPaused()
+    }
+
+    fun updateLabels() {
+        val view = (mView as TimerView)
+        view.setSets(formatSets());
+    }
+
+    fun formatSets(): String {
+        val exists = Repository.repositoryRoutineForTodayExists()
+
+        if (exists) {
+            val routine = Repository.repositoryRoutineForToday
+
+            routine.exercises.filter {
+                it.exerciseId == RoutineStream.exercise.exerciseId
+            }.firstOrNull()?.let {
+                val sets = it.sets
+
+                if (sets.size == 1 && sets.first().seconds == 0) {
+                    return "First Set"
+                } else if (sets.size >= Constants.maximumNumberOfSets) {
+                    return "12 Sets"
+                } else if (sets.size >= 5) {
+                    return "Set ${sets.count() + 1}"
+                }
+
+                var str = ""
+
+                for (set in sets) {
+                    str += set.seconds.toString() + "s-"
+                }
+
+                str += "X"
+
+                return str
+            }
+        }
+
+        return "First Set"
     }
 
     fun playSound() {
@@ -166,6 +212,7 @@ class TimerPresenter : AbstractPresenter() {
     fun onClickStartStopTimeButton() {
         if (TimerShared.isPlaying) {
             logTime()
+            updateLabels()
 
             pauseTimer()
         } else {
@@ -299,6 +346,10 @@ open class TimerView : AbstractView {
 
     fun setSeconds(text: String) {
         timer_seconds.text = text
+    }
+
+    fun setSets(sets: String) {
+        timer_logger_sets.text = sets
     }
 
     fun showPlaying() {
