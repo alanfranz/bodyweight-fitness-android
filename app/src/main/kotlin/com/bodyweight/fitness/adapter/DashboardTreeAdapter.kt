@@ -154,11 +154,7 @@ class DashboardSectionPresenter(itemView: View) : DashboardAbstractPresenter(ite
     override fun onBindView(exerciseSubject: PublishSubject<Exercise>, tuple: Tuple) {
         val section = tuple.left as Section
 
-        if (section.sectionMode == SectionMode.All) {
-            itemView.section_title.text = section.title
-        } else {
-            itemView.section_title.text = section.title
-        }
+        itemView.section_title.text = section.title
 
         itemView.section_description.text = section.description
     }
