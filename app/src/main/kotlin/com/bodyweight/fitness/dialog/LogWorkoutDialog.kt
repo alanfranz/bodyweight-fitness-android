@@ -1,6 +1,7 @@
 package com.bodyweight.fitness.dialog
 
 import android.app.Dialog
+import android.content.Context
 import android.content.DialogInterface
 import android.support.design.widget.BottomSheetBehavior
 import android.support.design.widget.BottomSheetDialogFragment
@@ -138,7 +139,7 @@ class LogWorkoutDialog : BottomSheetDialogFragment() {
 
     private val logWorkoutPresenter: LogWorkoutPresenter = LogWorkoutPresenter()
     private val repositoryRoutine: RepositoryRoutine by lazy {
-        val primaryKeyRoutineId = arguments.getString(Constants.primaryKeyRoutineId)
+        val primaryKeyRoutineId = arguments!!.getString(Constants.primaryKeyRoutineId)
 
         if (primaryKeyRoutineId == null) {
             Repository.repositoryRoutineForToday
@@ -148,7 +149,7 @@ class LogWorkoutDialog : BottomSheetDialogFragment() {
     }
 
     private val repositoryExercise: RepositoryExercise by lazy {
-        val exerciseId = arguments.getString(Constants.exerciseId)
+        val exerciseId = arguments!!.getString(Constants.exerciseId)
 
         repositoryRoutine.exercises.filter { it.exerciseId.equals(exerciseId) }.first()
     }
@@ -169,7 +170,7 @@ class LogWorkoutDialog : BottomSheetDialogFragment() {
         val behavior = params.behavior
 
         if (behavior is BottomSheetBehavior) {
-            behavior.peekHeight = 400.toPx(context)
+            behavior.peekHeight = 400.toPx(context as Context)
             behavior.setBottomSheetCallback(bottomSheetCallback)
         }
 

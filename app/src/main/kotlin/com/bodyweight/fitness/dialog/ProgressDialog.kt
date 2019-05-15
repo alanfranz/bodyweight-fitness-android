@@ -1,6 +1,7 @@
 package com.bodyweight.fitness.dialog
 
 import android.app.Dialog
+import android.content.Context
 import android.support.design.widget.BottomSheetBehavior
 import android.support.design.widget.BottomSheetDialogFragment
 import android.support.design.widget.CoordinatorLayout
@@ -41,7 +42,7 @@ class ProgressDialog : BottomSheetDialogFragment() {
         val behavior = params.behavior
 
         if (behavior is BottomSheetBehavior) {
-            behavior.peekHeight = 400.toPx(context)
+            behavior.peekHeight = 400.toPx(context as Context)
             behavior.setBottomSheetCallback(bottomSheetCallback)
         }
 

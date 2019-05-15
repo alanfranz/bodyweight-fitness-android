@@ -124,7 +124,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center|bottom"
                         android:visibility="gone"
-                        app:typeface="roboto_bold" />
+                        app:robotoTypeface="roboto_bold" />
 
                 </RelativeLayout>
                 <RelativeLayout

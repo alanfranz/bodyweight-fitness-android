@@ -16,13 +16,13 @@ class Slide : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (arguments != null && arguments.containsKey(ARG_LAYOUT_RES_ID)) {
-            layoutResId = arguments.getInt(ARG_LAYOUT_RES_ID)
+        if (savedInstanceState != null && savedInstanceState.containsKey(ARG_LAYOUT_RES_ID)) {
+            layoutResId = savedInstanceState.getInt(ARG_LAYOUT_RES_ID)
         }
     }
 
     override fun onCreateView(
-            inflater: LayoutInflater?,
+            inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?): View? {
 

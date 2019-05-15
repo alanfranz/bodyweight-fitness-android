@@ -124,7 +124,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center|top"
                         android:text="5s-5s-X"
-                        app:typeface="roboto_bold" />
+                        app:robotoTypeface="roboto_bold" />
 
                 </RelativeLayout>
                 <RelativeLayout
