@@ -18,6 +18,7 @@ import java.util.*
 
 class RepsLoggerPresenter : AbstractPresenter() {
     var numberOfReps: Int = 5
+    var previousWeight: Double = 0.0
 
     override fun bindView(view: AbstractView) {
         super.bindView(view)
@@ -26,6 +27,7 @@ class RepsLoggerPresenter : AbstractPresenter() {
                 .bindToLifecycle(view)
                 .subscribe {
                     numberOfReps = Preferences.getNumberOfRepsForExercise(it.exerciseId, 5)
+                    previousWeight = getPreviousWeight(it.exerciseId)
 
                     updateLabels()
                 }
@@ -35,6 +37,29 @@ class RepsLoggerPresenter : AbstractPresenter() {
                 .subscribe {
                     updateLabels()
                 }
+    }
+
+    fun getPreviousWeight(exerciseId: String) : Double {
+        var result = 0.0
+        val repositoryRoutine = Repository.repositoryRoutineForToday
+        val realm = Repository.realm
+        val results = realm.where(RepositoryRoutine::class.java)
+                        .lessThan("startTime", repositoryRoutine.startTime)
+                        .notEqualTo("id", repositoryRoutine.id)
+                        .equalTo("title", repositoryRoutine.title)
+                        .findAll()
+
+        if (results.isNotEmpty()) {
+            results.lastOrNull()?.let {
+                it.exercises.filter {
+                    it.exerciseId.equals(exerciseId)
+                }.firstOrNull()?.let {
+                    val lastSet = it.sets.last()
+                    result = lastSet.weight
+                }
+            }
+        }
+        return result
     }
 
     override fun restoreView(view: AbstractView) {
@@ -69,14 +94,15 @@ class RepsLoggerPresenter : AbstractPresenter() {
 
                     if (numberOfSets == 1 && firstSet.reps == 0) {
                         firstSet.reps = numberOfReps
+                        firstSet.weight = previousWeight
 
                         Stream.setLoggedSetReps(SetReps(numberOfSets, numberOfReps))
                     } else {
                         val repositorySet = realm.createObject(RepositorySet::class.java, "Set-" + UUID.randomUUID().toString())
-
+                        val lastSet = it.sets.last()
                         repositorySet.isTimed = false
                         repositorySet.seconds = 0
-                        repositorySet.weight = 0.0
+                        repositorySet.weight = lastSet.weight
                         repositorySet.reps = numberOfReps
 
                         repositorySet.exercise = it
